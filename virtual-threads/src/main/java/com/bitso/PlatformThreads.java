@@ -18,12 +18,6 @@ public class PlatformThreads {
     public static void main(String[] args) {
         
         var timestamp = Instant.now().toEpochMilli();
-//        var atomicInt = new AtomicInteger(0);
-    
-    //        try (var executor = Executors.newFixedThreadPool(8)){
-    //            IntStream.range(0, 50_000_000).forEach(i ->
-    //                executor.submit(atomicInt::getAndIncrement));
-    //        }
         
         var atomicInt = new AtomicInteger(0);
         
