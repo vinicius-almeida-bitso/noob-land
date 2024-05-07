@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/noob-land.iml" filepath="$PROJECT_DIR$/.idea/noob-land.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/virtual-threads.iml" filepath="$PROJECT_DIR$/.idea/modules/virtual-threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/virtual-threads.main.iml" filepath="$PROJECT_DIR$/.idea/modules/virtual-threads.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/virtual-threads.test.iml" filepath="$PROJECT_DIR$/.idea/modules/virtual-threads.test.iml" />
+    </modules>
+  </component>
+</project>
