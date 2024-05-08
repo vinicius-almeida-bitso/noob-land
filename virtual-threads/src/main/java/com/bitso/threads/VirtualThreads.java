@@ -1,4 +1,4 @@
-package com.bitso;
+package com.bitso.threads;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -8,22 +8,9 @@ import java.util.stream.IntStream;
 
 public class VirtualThreads {
 
-    static class Transfer {
-        public int amount;
-        public Transfer(int amount) {
-            this.amount = amount;
-        }
-    }
-
     public static void main(String[] args) {
         
         var timestamp = Instant.now().toEpochMilli();
-//        var atomicInt = new AtomicInteger(0);
-    
-    //        try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-    //            IntStream.range(0, 50_000_000).forEach(i ->
-    //                executor.submit(atomicInt::getAndIncrement));
-    //        }
         
         var atomicInt = new AtomicInteger(0);
         
@@ -38,7 +25,6 @@ public class VirtualThreads {
         
         System.out.printf("time elapsed=%s%n", Instant.now().toEpochMilli() - timestamp);
         System.out.println(atomicInt.get());
-
     }
 
 }

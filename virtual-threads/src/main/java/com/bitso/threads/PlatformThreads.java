@@ -1,4 +1,4 @@
-package com.bitso;
+package com.bitso.threads;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -7,13 +7,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class PlatformThreads {
-
-    static class Transfer {
-        public int amount;
-        public Transfer(int amount) {
-            this.amount = amount;
-        }
-    }
 
     public static void main(String[] args) {
         

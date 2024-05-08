@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.okhttp3:okhttp:5.0.0-alpha.14" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.squareup.okhttp3" artifactId="okhttp" version="5.0.0-alpha.14" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.sdkman/candidates/gradle/8.6/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/5.0.0-alpha.14/c59864766ffc0d0dd4394ec0af5e3b60bf83d10f/okhttp-5.0.0-alpha.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
