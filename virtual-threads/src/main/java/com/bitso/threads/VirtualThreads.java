@@ -17,7 +17,7 @@ public class VirtualThreads {
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             IntStream.range(0, 10_000).forEach(i ->
                 executor.submit(() -> {
-                    Thread.sleep(Duration.ofMillis(20));
+                    Thread.sleep(Duration.ofSeconds(1));
                     System.out.printf("Thread name=%s | Thread id=%s\n", Thread.currentThread().getName(), Thread.currentThread().threadId());
                     return atomicInt.getAndIncrement();
                 }));

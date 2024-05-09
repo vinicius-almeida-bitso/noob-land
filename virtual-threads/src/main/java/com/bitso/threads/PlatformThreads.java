@@ -14,10 +14,10 @@ public class PlatformThreads {
         
         var atomicInt = new AtomicInteger(0);
         
-        try (var executor = Executors.newFixedThreadPool(8)) {
+        try (var executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())) {
             IntStream.range(0, 10_000).forEach(i ->
                 executor.submit(() -> {
-                    Thread.sleep(Duration.ofMillis(20));
+                    Thread.sleep(Duration.ofSeconds(1));
                     System.out.printf("Thread name=%s | Thread id=%s\n", Thread.currentThread().getName(), Thread.currentThread().threadId());
                     return atomicInt.getAndIncrement();
                 }));

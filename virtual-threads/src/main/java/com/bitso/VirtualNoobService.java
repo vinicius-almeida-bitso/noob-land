@@ -31,6 +31,8 @@ public class VirtualNoobService {
     ObjectMapper objectMapper = new ObjectMapper();
     ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
 
+    int requests = 10;
+
     /**
      * Thread-per-request style with virtual threads
      */
@@ -44,7 +46,7 @@ public class VirtualNoobService {
         
         // thread per request style
         // Let's say we have 10 requests to make
-        IntStream.range(0, 10).forEach(i -> {
+        IntStream.range(0, requests).forEach(i -> {
             var response = executorService.submit(() -> request("http://localhost:8081/v1/fireblocks/account?vaultId=2&assetId=eth&workspace=hw&network=eth"));
             responses.add(response);
         });
@@ -74,7 +76,7 @@ public class VirtualNoobService {
 
         // thread per request style
         // Let's say we have 10 requests to make
-        IntStream.range(0, 10).forEach(i -> {
+        IntStream.range(0, requests).forEach(i -> {
             Thread.ofVirtual().start(() -> {
                 try {
                     var response = request("http://localhost:8081/v1/fireblocks/account?vaultId=2&assetId=eth&workspace=hw&network=eth");
