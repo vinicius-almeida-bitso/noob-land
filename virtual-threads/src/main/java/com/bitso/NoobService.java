@@ -22,7 +22,7 @@ public class NoobService {
      * Thread-per-request style with virtual threads
      */
     @GetMapping
-    public ResponseEntity<?> doNoobThings() throws ExecutionException, InterruptedException {
+    public ResponseEntity<?> doNoobThingsVirtualThreads() throws ExecutionException, InterruptedException {
         
         try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             
